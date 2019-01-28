@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  drupal:
+    build: .
+    ports:
+      - 18001:80
+    volumes:
+      - ./:/data/drupal
+    links:
+      - db
+
+  db:
+    image: mysql:5.7.21
+    environment:
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - mysqldata:/var/lib/mysql
+
+volumes:
+  mysqldata:
+    driver: local
