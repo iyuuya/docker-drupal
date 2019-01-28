@@ -12,10 +12,12 @@ RUN amazon-linux-extras install php7.2 \
       php-opcache \
       php-xml \
       git \
-      mysql-community-common \
-      mysql-community-libs \
-      mysql-community-client \
-      httpd httpd-tools \
+      httpd \
+      httpd-tools \
+      https://cdn.mysql.com/archives/mysql-5.6/MySQL-shared-5.6.42-1.el7.x86_64.rpm \
+      https://cdn.mysql.com/archives/mysql-5.6/MySQL-shared-compat-5.6.42-1.el7.x86_64.rpm \
+      https://cdn.mysql.com/archives/mysql-5.6/MySQL-devel-5.6.42-1.el7.x86_64.rpm \
+      https://cdn.mysql.com/archives/mysql-5.6/MySQL-client-5.6.42-1.el7.x86_64.rpm \
  && rm -rf /var/cache/yum/* \
  && yum clean all
 
