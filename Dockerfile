@@ -12,6 +12,7 @@ RUN amazon-linux-extras install php7.2 \
       php-opcache \
       php-xml \
       git \
+      unzip \
       httpd \
       httpd-tools \
       https://cdn.mysql.com/archives/mysql-5.6/MySQL-shared-5.6.42-1.el7.x86_64.rpm \
